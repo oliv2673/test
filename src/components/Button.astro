@@ -1,0 +1,97 @@
+---
+const { variant, text1, text2, imgpath } = Astro.props;
+---
+
+<button type="button" class={variant}>
+  <div class="grid-1_1_1">
+    <div class="box"></div>
+    <div class="con">
+      <h3>{text1}</h3>
+      <p>{text2}</p>
+    </div>
+    <div class="arrow">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="25"
+        height="25"
+        viewBox="0 0 24 24"
+        ><path
+          fill="currentColor"
+          d="m14.475 12l-7.35-7.35q-.375-.375-.363-.888t.388-.887q.375-.375.888-.375t.887.375l7.675 7.7q.3.3.45.675t.15.75q0 .375-.15.75t-.45.675l-7.7 7.7q-.375.375-.875.363T7.15 21.1q-.375-.375-.375-.888t.375-.887L14.475 12Z"
+        ></path></svg
+      >
+    </div>
+  </div>
+</button>
+
+<style>
+  button {
+    /*     display: flex;
+    justify-content: space-between; */
+    border: none; /* Remove the default button border */
+  }
+
+  .primary {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    color: black;
+    border: 0;
+  }
+
+  .secondary {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    color: black;
+    /* border: 0; */
+  }
+
+  .box {
+    height: 2.5rem;
+    width: 2.5rem;
+    background: #cbd5e1;
+    border-radius: 5px;
+    margin: auto;
+  }
+
+  h3,
+  p {
+    margin: 0;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 2px;
+  }
+
+  p {
+    color: #b6babe;
+  }
+  .grid-1_1_1 {
+    display: grid;
+    grid-template-columns: 1fr 7fr 1fr;
+    margin: auto;
+  }
+
+  .con {
+    margin: 0;
+    padding: 0;
+  }
+
+  svg {
+    color: #9333ea;
+    margin: auto;
+  }
+
+  .arrow {
+    margin: auto;
+    margin-right: 0;
+    display: none;
+  }
+  button:hover .arrow {
+    display: block;
+  }
+
+  button:hover {
+    background: #f1f5f9;
+  }
+</style>
